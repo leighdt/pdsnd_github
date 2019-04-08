@@ -22,13 +22,13 @@ def get_filters():
         city = input('\nOops, that entry is not an option. Please enter Chicago, New York City, or Washington:\n').lower()
 
     # get user input for month (all, january, february, ... , june)
-    month = input('\nWould you like to filter by month or look at all months (no month filter)? Enter the full name of the month, or enter "all" if all months:\n').lower()
+    month = input('\nWould you like to filter by month or look at all months (no month filter)?\nEnter the full name of the month, or enter "all" if all months: ').lower()
 
     while month not in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
         month = input('\nOops, that entry is not an option. Please enter a different month:\n').lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input('\nWould you like to filter by a day of the week or look at all days (no day filter)? Enter the day of the week, or enter "all" for all days:\n').lower()
+    day = input('\nWould you like to filter by a day of the week or look at all days (no day filter)?\nEnter the day of the week, or enter "all" for all days: ').lower()
 
     while day not in ['all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday']:
         day = input('\nOops, that entry is not an option. Please enter a day of the week:\n').lower()
@@ -184,15 +184,13 @@ def display_raw_data(df):
     The first 5 rows are displayed if the user enters 'yes'.
     The user has the option to keep continuing. If so, 5 more lines of data are displayed.
     """
-    rowstart = 0
     rowend = 5
 
     seeRawData = input('\nWould you like to view the raw data? Enter yes or no:\n').lower()
 
     if seeRawData == 'yes':
         while rowend <= df.shape[0]:
-            print(df[rowstart: rowend])
-            rowstart += 5
+            print(df[:rowend])
             rowend += 5
 
             moreRawData = input('\nWould you like to see five more rows of raw data? Enter yes or no:\n').lower()
