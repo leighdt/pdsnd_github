@@ -15,4 +15,6 @@ The raw data files used in this project are:
 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The following resources were used to complete this project:
+* Udacity "Introduction to Python" lessons
+* Suggestions from my Udacity Python project reviewer to make my code more efficient
