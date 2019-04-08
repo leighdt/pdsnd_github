@@ -179,15 +179,13 @@ def display_raw_data(df):
     The first 5 rows are displayed if the user enters 'yes'.
     The user has the option to keep continuing. If so, 5 more lines of data are displayed.
     """
-    rowstart = 0
     rowend = 5
 
     seeRawData = input('\nWould you like to view the raw data? Enter yes or no:\n').lower()
 
     if seeRawData == 'yes':
         while rowend <= df.shape[0]:
-            print(df[rowstart: rowend])
-            rowstart += 5
+            print(df[:rowend])
             rowend += 5
 
             moreRawData = input('\nWould you like to see five more rows of raw data? Enter yes or no:\n').lower()
