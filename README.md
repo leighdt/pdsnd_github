@@ -1,5 +1,5 @@
 ### Date created
-Creation date: April 8, 2019
+April 8, 2019
 
 ### Project Title
 Explore U.S. Bikeshare Data Python Script
