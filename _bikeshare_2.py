@@ -28,7 +28,7 @@ def get_filters():
         month = input('\nOops, that entry is not an option. Please enter a different month:\n').lower()
 
     # get user input for day of week (all, monday, tuesday, ... sunday)
-    day = input('\nWould you like to filter by a day of the week or look at all days (no day filter)? Enter the day of the week, or enter "all" for all days:\n').lower()
+    day = input('\nWould you like to filter by a day of the week or look at all days (no day filter)?\nEnter the day of the week, or enter "all" for all days: ').lower()
 
     while day not in ['all', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday']:
         day = input('\nOops, that entry is not an option. Please enter a day of the week:\n').lower()
